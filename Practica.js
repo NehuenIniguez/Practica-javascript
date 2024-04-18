@@ -32,3 +32,36 @@ console.log( pal, "Esta palabra tiene "+ pal.length + " letras")
 
 //ejercicio 4
 
+const n2 =7
+let n1 =n2 % 2
+if ( n1===0 )
+    console.log ("es par")
+        else console.log ("es impar")
+
+
+//ejercicio 5
+
+
+const m1=6
+let word="perú "
+console.log( word.repeat(m1) )
+
+//ejercicio 6
+
+let L=13
+let l2=9
+
+if (L<l2)
+    L = L + 1 
+        while (L < l2) {
+            console.log(L);
+            (L = L + 1 );
+        }
+    if (L>l2)
+        L = L - 1 
+            while (L > l2) {
+                console.log(L);
+                (L = L - 1 );
+            }
+    
+            
