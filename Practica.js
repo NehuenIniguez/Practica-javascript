@@ -22,3 +22,13 @@ if  (var1<var2 && var1<var3)
         else if (var2<var1 && var2<var3)
             console.log("el menor es", var2)
                 else console.log ("el menor es", var3)
+
+
+//ejercicio 3
+
+const pal="Locura"
+console.log( pal, "Esta palabra tiene "+ pal.length + " letras")
+
+
+//ejercicio 4
+
