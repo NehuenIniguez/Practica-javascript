@@ -1,7 +1,7 @@
 //ejercicio  1
 const num=5
 const nume=7
-let suma= num + nume
+suma= num + nume
 
 
 console.log (suma)
@@ -63,5 +63,45 @@ if (L<l2)
                 console.log(L);
                 (L = L - 1 );
             }
-    
-            
+
+
+//ejercicio 7
+
+let uno=20
+let dos=15
+//uno=uno+1
+//tres=uno %3
+if (uno<dos)
+    while (uno<=dos) {  
+        tres= uno %3
+         if (tres === 0 )
+         console.log( uno ," es multiplo de 3")
+         
+         uno = uno + 1
+}
+else if (uno>dos)
+    while (uno>=dos){
+        tres= uno %3
+         if (tres === 0 )
+         console.log( uno ," es multiplo de 3")
+            uno=uno-1
+    }
+
+//ejercicio 8
+
+let por= 0
+while (por<100) {
+    por=por+1
+    K=por%2
+    V=por%5
+        if (K===0 && V===0)
+            console.log(por ," es multiplo de 2 y de 5")
+}
+
+//ejercicio 9
+let array=[1 , 55 , 3 , 7 , 2]
+let sa=0
+let sum=array.reduce((accumulator, currentValue) => accumulator+currentValue,sa,)
+console.log(sum)
+
+//ejercicio 10
