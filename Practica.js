@@ -100,8 +100,22 @@ while (por<100) {
 
 //ejercicio 9
 let array=[1 , 55 , 3 , 7 , 2]
-let sa=0
-let sum=array.reduce((accumulator, currentValue) => accumulator+currentValue,sa,)
+let sum=array.reduce((accumulator, currentValue) => accumulator+currentValue,)
 console.log(sum)
+
+let cont=0
+//let doce=0
+let boom=0
+
+while (cont<5){
+   // let une=array[cont]
+   // doce=doce+1
+    boom=boom+array[cont]
+    cont=cont+1
+
+}
+console.log(boom)
+
+
 
 //ejercicio 10
