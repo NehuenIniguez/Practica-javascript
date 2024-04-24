@@ -105,12 +105,12 @@ console.log(sum)
 
 let cont=0
 //let doce=0
-let boom=0
+let suma_9=0
 
 while (cont<5){
    // let une=array[cont]
    // doce=doce+1
-    boom=boom+array[cont]
+    suma_9=suma_9+array[cont]
     cont=cont+1
 
 }
@@ -119,3 +119,124 @@ console.log(boom)
 
 
 //ejercicio 10
+let array10= [2,3,6,7,10]
+let cont10=0
+let suma10=0
+while (cont10<5){
+    numero=array10[cont10] %2
+            if (numero===0)
+            suma10=suma10+array10[cont10]
+    cont10=cont10+1
+}
+
+console.log(suma10)
+
+//ejercicio 11
+
+let var11= [
+   clave_1= "penelope" ,
+   clave_2= "pauperrimo"
+]
+function contarLetras(palabra) {
+    let ocurrencias = {};
+
+    for (let i = 0; i < palabra.length; i++) {
+        let letra = palabra[i].toUpperCase(); 
+        if (ocurrencias[letra]) {
+            ocurrencias[letra]++;
+        } else {
+            ocurrencias[letra] = 1;
+        }
+    }
+   
+    for (let letra in ocurrencias) {
+        console.log(`${letra} = ${ocurrencias[letra]}`);
+    }
+}
+
+contarLetras(clave_1);
+
+// ejercicio 12
+
+let personas = [
+    { nombre: "Juan", sexo: "M", edad: 30 },
+    { nombre: "María", sexo: "F", edad: 25 },
+    { nombre: "Pedro", sexo: "M", edad: 40 },
+    { nombre: "Ana", sexo: "F", edad: 35 }
+];
+
+function calcularPromedioEdad(lista) {
+    let sumaEdades = 0;
+    lista.forEach(persona => {
+        sumaEdades += persona.edad;
+    });
+    return sumaEdades / lista.length;
+}
+
+function obtenerMujerMayorEdad(lista) {
+    let mayorEdad = 0;
+    let nombreMujerMayorEdad = "";
+    lista.forEach(persona => {
+        if (persona.sexo === "F" && persona.edad > mayorEdad) {
+            mayorEdad = persona.edad;
+            nombreMujerMayorEdad = persona.nombre;
+        }
+    });
+    return nombreMujerMayorEdad;
+}
+
+function obtenerHombreMenorEdad(lista) {
+    let menorEdad = Infinity;
+    let nombreHombreMenorEdad = "";
+    lista.forEach(persona => {
+        if (persona.sexo === "M" && persona.edad < menorEdad) {
+            menorEdad = persona.edad;
+            nombreHombreMenorEdad = persona.nombre;
+        }
+    });
+    return nombreHombreMenorEdad;
+}
+
+function calcularPromedioEdadMujeres(lista) {
+    let sumaEdadesMujeres = 0;
+    let cantidadMujeres = 0;
+    lista.forEach(persona => {
+        if (persona.sexo === "F") {
+            sumaEdadesMujeres += persona.edad;
+            cantidadMujeres++;
+        }
+    });
+    return sumaEdadesMujeres / cantidadMujeres;
+}
+
+let promedioEdad = calcularPromedioEdad(personas);
+console.log("Promedio de edad:", promedioEdad);
+
+let nombreMujerMayorEdad = obtenerMujerMayorEdad(personas);
+console.log("Nombre de la mujer con mayor edad:", nombreMujerMayorEdad);
+
+let nombreHombreMenorEdad = obtenerHombreMenorEdad(personas);
+console.log("Nombre del hombre con menor edad:", nombreHombreMenorEdad);
+
+let promedioEdadMujeres = calcularPromedioEdadMujeres(personas);
+console.log("Promedio de edad de las mujeres:", promedioEdadMujeres);
+
+//ejercicio 14
+
+function obtenerDivisores(minimo, maximo, divisor) {
+    let divisores = [];
+    for (let i = minimo; i <= maximo; i++) {
+        if (i % divisor === 0) {
+            divisores.push(i);
+        }
+    }
+    return divisores;
+}
+
+let minimo = 1;
+let maximo = 30;
+let divisor = 6;
+console.log(obtenerDivisores(minimo, maximo, divisor));
+
+
+
